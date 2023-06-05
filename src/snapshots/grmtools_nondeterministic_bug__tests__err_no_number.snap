@@ -1,0 +1,49 @@
+---
+source: src/lib.rs
+expression: "term_y::parse(&lexer)"
+---
+(
+    Some(
+        Err(
+            LexemeError(
+                DefaultLexeme {
+                    start: 2,
+                    len: 0,
+                    faulty: true,
+                    tok_id: 3,
+                },
+            ),
+        ),
+    ),
+    [
+        ParseError(
+            ParseError {
+                stidx: StIdx(
+                    1,
+                ),
+                lexeme: DefaultLexeme {
+                    start: 2,
+                    len: 1,
+                    faulty: false,
+                    tok_id: 2,
+                },
+                repairs: [
+                    [
+                        Insert(
+                            TIdx(
+                                3,
+                            ),
+                        ),
+                    ],
+                    [
+                        Insert(
+                            TIdx(
+                                0,
+                            ),
+                        ),
+                    ],
+                ],
+            },
+        ),
+    ],
+)
