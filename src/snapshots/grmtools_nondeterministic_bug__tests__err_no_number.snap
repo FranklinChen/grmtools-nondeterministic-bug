@@ -10,7 +10,7 @@ expression: "term_y::parse(&lexer)"
                     start: 2,
                     len: 0,
                     faulty: true,
-                    tok_id: 3,
+                    tok_id: 0,
                 },
             ),
         ),
@@ -28,13 +28,6 @@ expression: "term_y::parse(&lexer)"
                     tok_id: 2,
                 },
                 repairs: [
-                    [
-                        Insert(
-                            TIdx(
-                                3,
-                            ),
-                        ),
-                    ],
                     [
                         Insert(
                             TIdx(

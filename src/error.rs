@@ -8,7 +8,4 @@ pub enum TermError<'input> {
 
     #[error("lexeme error: {0}")]
     LexemeError(#[from] lrlex::DefaultLexeme),
-
-    #[error("unknown token: {0}")]
-    UnknownToken(&'input str),
 }
